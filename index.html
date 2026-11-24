@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Classroom — School Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Classroom home"><span class="brand-mark">C</span><span>classroom<span class="brand-period">.</span></span></a>
+      <div class="school-switch"><span class="school-icon">🏫</span><span><strong>Oakwood Academy</strong><small>School workspace</small></span><span class="chevron">⌄</span></div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-item" data-view="students"><span>♙</span> Students <span class="nav-count" id="studentNavCount">0</span></button>
+        <button class="nav-item" data-view="teachers"><span>♧</span> Teachers <span class="nav-count" id="teacherNavCount">0</span></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✦</span><strong>Getting started</strong><p>Add your school’s first students and teachers to get organized.</p></div><div class="profile"><span class="avatar avatar-purple">AD</span><span><strong>School Admin</strong><small>Administrator</small></span><button aria-label="Profile options" class="more-button">···</button></div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button><div class="breadcrumb">Oakwood Academy <span>/</span> <strong id="breadcrumbCurrent">Dashboard</strong></div><div class="topbar-right"><span class="today-label" id="todayLabel"></span><button class="icon-button" aria-label="Notifications">♧<i></i></button><span class="avatar avatar-purple top-avatar">AD</span></div></header>
+      <section class="page" id="page"></section>
+      <footer>Classroom <span>·</span> School administration, made simpler.</footer>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><p class="eyebrow" id="modalEyebrow">RECORD</p><h2 id="modalTitle">Add student</h2></div><button class="close-button" id="closeModal" aria-label="Close dialog">×</button></div><form id="recordForm"><div class="form-grid" id="formFields"></div><div class="form-actions"><button type="button" class="button button-secondary" id="cancelModal">Cancel</button><button type="submit" class="button button-primary" id="saveRecord">Save record</button></div></form></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
